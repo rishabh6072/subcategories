@@ -1,0 +1,91 @@
+/* CSS declarations go here */
+
+.container {
+	text-align: center;
+}
+.input-cat{
+	width: 30%;
+}
+.form-control {
+	width: 30%;
+	margin: 0 auto;
+}
+
+.thumbnail > img, .thumbnail a > img {
+	width: 250px;
+	height: 250px;
+	object-fit: cover;
+	background-blend-mode: saturation;
+}
+
+.categories, .addarticles, .admin, .root {
+	background: rgba(0, 0 , 0, 0.6);
+	color: rgb(255, 255, 255) !important;
+	font-weight: 600;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	background: rgba(0, 0 , 0, 0.8);
+	color: rgb(255, 255, 255) !important;
+	/*font-weight: 600;*/
+}
+
+.display-category {
+	/*width: 40%;*/
+	margin-top: 2%;
+	text-align: left;
+	text-indent: 10px;
+	font-size: 1.4em;
+}
+
+td, th {
+	padding: 10px;
+}
+
+.col-md2 {
+	margin-left: 20px;
+}
+.css {
+	margin-left: 20em;
+	display: list-item;
+}
+
+.level2 {
+  	margin-left: 5em;
+	display: block;
+}
+.level1 {
+  	margin-left: 2.5em;
+	display: block;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	border-top: none;
+}
+
+.parent-hover {
+	text-align: left;
+	border-color: #ac2925;
+	border-radius: 0px;
+}
+.parent-hover:hover {
+	background-color: #fff;
+	text-align: left;
+	border-color: #ac2925;
+	border-radius: 0px;
+}
+.child-hover {
+	border-color: #398439;
+	text-align: left;
+	border-radius: 0px;
+}
+.child-hover:hover {
+	background-color: #449d44;
+	border-color: #398439;
+	text-align: left;
+	border-radius: 0px;
+}
+
+input[type=checkbox] {
+	margin: 10px 10px 0;
+	float: left;
+}

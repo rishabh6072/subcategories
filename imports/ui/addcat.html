@@ -1,0 +1,52 @@
+<template name="addNew">
+		{{> navbar}}
+	<div class="container">
+		<h1>Add Categories Page</h1>
+		{{> flashMessages}}
+		{{> sAlert}}
+
+		<form class="submit">
+			<div class="form-group">
+				<input type="text" name="catagory" class="input-cat form-control" value="{{editItem.catItem}}" placeholder=" Add Category">
+			</div>
+
+			<br>
+
+			<div class="form-group">
+			  <select id="sel1" name="parentItem" class="category form-control">
+				<option value="">Select Parent Category</option>
+				{{#each catList}}
+				  <option value="{{_id}}">{{catItem}}</option>
+				{{/each}}
+			  </select>
+			</div>
+
+			<input type="submit" name="" class="btn btn-success">
+			<button class="alertdelete btn btn-danger" name="" {{deleteDisabled}}>Delete</button>
+		</form>
+	</div>
+
+
+	<div class="display-category container">
+		<div class="container"><H2>Categories</H2></div>
+		<div id="box"></div>
+		<!-- {{> reactiveTable collection=myCollection fields=fields settings=settings}}-->
+		
+		
+		{{#each catDisplay}}
+		<div>
+			{{#if equals parentItem ""}}
+					<input type="checkbox">
+					<div class='btn parent-hover' style='padding-left:{{ multiply level 3 }}em; display: block;background: #d9534f'>{{catItem}}</div>
+				{{else}} 
+					<input type="checkbox">
+					<div class='btn child-hover' style='padding-left:{{ multiply level 3 }}em; display: block;background: #5cb85c;'>{{catItem}}</div>
+			{{/if}}
+		</div>
+		{{/each}}
+		
+		
+	</div>
+
+	<div class="demo"></div>
+</template>
